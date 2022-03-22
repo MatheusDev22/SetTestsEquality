@@ -15,6 +15,17 @@ public class Product {
 	public String getName() {
 		return name;
 	}
+	public void setName(String name){
+		this.name = name;
+	}
+	
+	public Double getPrice() {
+		return price;
+	}
+	public void setPrice(Double price) {
+		this.price = price;
+	}
+
 	@Override
 	public int hashCode() {
 		return Objects.hash(name, price);
@@ -30,17 +41,6 @@ public class Product {
 			return false;
 		Product other = (Product) obj;
 		return Objects.equals(name, other.name) && Objects.equals(price, other.price);
-	}
-
-	public void setName(String name){
-		this.name = name;
-	}
-	
-	public Double getPrice() {
-		return price;
-	}
-	public void setPrice(Double price) {
-		this.price = price;
 	}
 
 }
